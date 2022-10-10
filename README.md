@@ -84,6 +84,7 @@ Give a ⭐️ if you like this project!
 - To all the collaborators for the Readme Template and the Linters
 - The Microverse Team
 - My coding-partners and fellow cohort members
+- Image for the header logo taken from [here](https://www.pngegg.com/en/png-zmlqe)
 
 ## 📝 License
 
