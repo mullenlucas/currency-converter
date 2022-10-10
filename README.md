@@ -1,6 +1,38 @@
-# Getting Started with Create React App and Redux
+![](https://img.shields.io/badge/Microverse-blueviolet) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Currency Converter - Global Edition - React Application
+
+> A react web application for converting between different currencies from around the world, updating it's values daily and even referencing past-date's values
+
+## Built With
+
+- HTML
+- CSS
+- Javascript
+- React
+- Redux
+- Linters for React
+
+## Website
+
+Coming Soon !
+
+## Information
+
+**Work In Progress**
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project fetches information from the [Currency-API]()
+
+**This project is for an exercise for the microverse program. Features may be added across exercise completions**
+
+## To run this repository locally, clone this repository and run this command on the directory's terminal:
+
+```
+npm install
+```
+All the necessary packages will be installed with the command above
 
 ## Available Scripts
 
@@ -29,18 +61,30 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👤 **Lucas Mullen**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@mullenlucas](https://github.com/mullenlucas)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucas-mullen-447312119/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🤝 Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ - Readme Template taken from [Microverse Readme Template](https://github.com/microverseinc/readme-template)
+ - Linters for React taken from [Microverse Linters](https://github.com/microverseinc/linters-config)
+ 
+Contributions, issues, and feature requests are welcome!
 
-## Learn More
+## Show your support !
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Give a ⭐️ if you like this project!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
+
+- To all the collaborators for the Readme Template and the Linters
+- The Microverse Team
+- My coding-partners and fellow cohort members
+
+## 📝 License
+
+This project is [MIT licensed](https://github.com/mullenlucas/space-travelers-hub/blob/dev/MIT.md)
