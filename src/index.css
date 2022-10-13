@@ -2,7 +2,6 @@
 @import url('http://fonts.cdnfonts.com/css/gill-sans');
 
 :root {
-  --font-lato: font-family: Lato, sans-serif;
-  --font-gill: font-family: Gill Sans, sans-serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-gill: 'Gill Sans', sans-serif;
 }
-
