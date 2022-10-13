@@ -5,7 +5,7 @@ import '../css/nav.css';
 
 function Nav({ title, routes }) {
   return (
-    <header className="container">
+    <header>
       <Link className="header-logo" to="/">
         <img src={logo} alt="logo currency converter" className="logo-img" />
         <h1>{title}</h1>
