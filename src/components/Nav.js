@@ -11,7 +11,7 @@ function Nav({ title, routes }) {
         <h1>{title}</h1>
       </Link>
       <nav>
-        <ul>
+        <ul className="ul-links">
           {routes.map(({ name, path }) => (
             <li key={path}>
               <NavLink className="nav-link" to={path} end>

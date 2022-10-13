@@ -1,3 +1,48 @@
-header {
+header, nav {
   display: flex;
+  justify-content: space-around;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 0.6rem;
+  border-bottom:  1px solid black;
+  border-radius: 3.6px;
+}
+
+h1 {
+  font-family: var(--font-lato);
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 3.6%;
+  gap: 12px;
+}
+
+.logo-img {
+  max-width: 64px;
+}
+
+.ul-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  font-family: var(--font-lato);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
