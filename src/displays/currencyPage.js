@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-// import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCurrencies } from '../../redux/currencySlice';
-
-import CurrencyItem from './currencyItem';
+import { getCurrencies } from '../redux/currencySlice';
+import CurrencyItem from '../components/currencyItem';
 
 const CurrenciesPage = () => {
   const currencies = useSelector((state) => state.currencies);
-  // const [value, setValue] = useState('Select Currency');
   const [search, setSearch] = useState('');
   const dispatch = useDispatch();
 
@@ -16,12 +13,6 @@ const CurrenciesPage = () => {
       dispatch(getCurrencies());
     }
   });
-
-  // const handleSelect = (e) => {
-  //   console.log(e);
-  //   setValue(e);
-  //   console.log(currencies);
-  // };
 
   const filtered = currencies.filter(
     (currency) => !search || new RegExp(search, 'ig').test(currency.name),

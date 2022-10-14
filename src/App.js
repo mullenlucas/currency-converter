@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import routes from './components/Routes';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import CurrenciesPage from './components/currency/currencyPage';
+import CurrenciesPage from './displays/currencyPage';
 
 function App() {
   return (

@@ -37,7 +37,7 @@ export const fetchCurrencies = (curr) => ({
 export const getCurrencies = () => async (dispatch) => {
   const response = await axios.get(currencyListUrl);
   const objResponse = response.data;
-  const filteredObjResp = objResponse.filter((v) => v.currencyName !== null);
+  const filteredObjResp = objResponse.filter((v) => v.currencyName !== null && v.countryCode !== 'Crypto');
 
   const convertionResponse = await axios.get(currencyConversionsUrl, {
     params: {
@@ -59,9 +59,7 @@ export const getCurrencies = () => async (dispatch) => {
     USDconversion: conversionObj.rates[e.currencyCode],
   }));
 
-  const finalObj = obj.filter((v) => v.USDconversion !== undefined);
-
-  dispatch(fetchCurrencies(finalObj));
+  dispatch(fetchCurrencies(obj));
 };
 
 const currencies = (state = currencyInitialState, action) => {

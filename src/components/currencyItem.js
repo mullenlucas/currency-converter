@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import '../../css/currency.css';
+import '../css/currency.css';
 
 const CurrencyItem = ({ currency }) => {
   const {
