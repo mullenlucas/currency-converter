@@ -1,12 +1,28 @@
 import axios from 'axios';
+import { createSlice } from '@reduxjs/toolkit';
 
-// Amdoren vars
-// const apiKey = 'ngR8EuTtpiBELHRWMiytHhgP2Nkw4z';
+const apiKey = '422061d241f24ab4869119d3071f61d2';
 
-// const currencyListBaseUrl = 'https://www.amdoren.com/api/currency_list.php';
+export const currencySlice = createSlice({
+  name: 'convert2USDnEUR',
+  initialState: {
+    from: '',
+    conversions: [],
+  },
+  reducers: {
+    convert(state, action) {
+      const currVals = action.payload;
+      state.conversions.push({
+        currency: currVals.curr,
+        toUsd: currVals.tousd,
+        toEur: currVals.toeur,
+      });
+    },
+  },
+});
 
-// const currencyListUrl = `${currencyListBaseUrl}?api_key=${apiKey}`;
-const currencyListUrl = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json';
+const currencyListUrl = 'https://api.currencyfreaks.com/supported-currencies';
+const currencyConversionsUrl = 'https://api.currencyfreaks.com/latest';
 
 const currencyInitialState = [];
 
@@ -21,12 +37,31 @@ export const fetchCurrencies = (curr) => ({
 export const getCurrencies = () => async (dispatch) => {
   const response = await axios.get(currencyListUrl);
   const objResponse = response.data;
-  const obj = Object.keys(objResponse).map((k, i) => ({
+  const filteredObjResp = objResponse.filter((v) => v.currencyName !== null);
+
+  const convertionResponse = await axios.get(currencyConversionsUrl, {
+    params: {
+      apikey: apiKey,
+    },
+  });
+  const conversionObj = convertionResponse.data;
+
+  const obj = filteredObjResp.map((e, i) => ({
     id: i,
-    name: objResponse[k],
-    acronym: k,
+    name: e.currencyName,
+    acronym: e.currencyCode,
+    icon: e.icon,
+    status: e.status,
+    availableFrom: e.available_in_historical_data_form,
+    availableTill: e.available_in_historical_data_till,
+    countryCode: e.countryCode,
+    countryName: e.countryName,
+    USDconversion: conversionObj.rates[e.currencyCode],
   }));
-  dispatch(fetchCurrencies(obj));
+
+  const finalObj = obj.filter((v) => v.USDconversion !== undefined);
+
+  dispatch(fetchCurrencies(finalObj));
 };
 
 const currencies = (state = currencyInitialState, action) => {
