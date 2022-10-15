@@ -1,4 +1,6 @@
-.currency-card, .currency-card-header, .currency-card-footer {
+.currency-card,
+.currency-card-header,
+.currency-card-footer {
   display: flex;
 }
 
