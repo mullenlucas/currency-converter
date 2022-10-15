@@ -1,6 +1,7 @@
 {
   "name": "currency-converter",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
@@ -32,6 +33,12 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "transformIgnorePatterns": ["node_modules\/(?!axios)"]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -48,6 +55,7 @@
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-syntax-jsx": "^7.18.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-react": "^7.18.6",
     "@testing-library/react": "^13.4.0",
