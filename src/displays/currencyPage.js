@@ -25,7 +25,7 @@ const CurrenciesPage = () => {
         <input
           type="search"
           value={search}
-          placeholder="Search Coins"
+          placeholder="Search Currencies"
           onChange={(e) => {
             setSearch(e.target.value);
           }}
