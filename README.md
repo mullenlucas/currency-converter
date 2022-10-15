@@ -23,9 +23,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project fetches information from the [Currency-API]()
+This project fetches information from the [CurrencyFreaks-API](https://currencyfreaks.com/documentation.html)
 
-**This project is for an exercise for the microverse program. Features may be added across exercise completions**
+## Images Showcase
+
+
 
 ## To run this repository locally, clone this repository and run this command on the directory's terminal:
 
