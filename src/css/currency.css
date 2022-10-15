@@ -1,0 +1,29 @@
+.currency-card,
+.currency-card-header,
+.currency-card-footer {
+  display: flex;
+}
+
+.currency-card {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 128px;
+  width: 128px;
+}
+
+.currency-card-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-card-footer {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-icon {
+  width: 64px;
+  height: 64px;
+}

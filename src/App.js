@@ -1,19 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import routes from './components/Routes';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
+import CurrenciesPage from './displays/currencyPage';
+import CurrencyDetails from './displays/detailsPage';
 
 function App() {
   return (
     <div className="App">
       <Router className="App">
-        <Nav title="Global Currency Converter" routes={routes} />
+        <Nav title="Global Currency Converter" />
         <Routes>
-          <Route path="/" element={<p>Home Page</p>} />
-          <Route path="/converter" element={<p>Converter Page</p>} />
-          <Route path="/date" element={<p>Date Page</p>} />
+          <Route path="/" element={<CurrenciesPage />} />
+          <Route path="/details" element={<CurrencyDetails />} />
           <Route path="/*" element={<p>404 Page not found</p>} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
