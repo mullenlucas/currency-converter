@@ -9,7 +9,6 @@ header {
   background-color: var(--color-exterior);
   padding: 0.6rem;
   border-bottom: 1px solid black;
-  border-radius: 3.6px;
 }
 
 h1 {
@@ -17,7 +16,6 @@ h1 {
   font-weight: 900;
   font-size: 2.4rem;
   color: rgb(254, 255, 221);
-  
 }
 
 .header-logo {
@@ -31,7 +29,7 @@ h1 {
 
 .logo-img {
   max-width: 64px;
-  background-color: var(--color-maincard);
+  color: white;
 }
 
 .ul-links {

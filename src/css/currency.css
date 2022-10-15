@@ -21,27 +21,74 @@
 }
 
 .home-card {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 12px;
   padding: 12px;
-  border-radius: 3.6%;
-  background: rgb(37,49,70);
   color: white;
   text-align: center;
+  position: relative;
+  height: 100%;
   width: 90%;
+  background-image: url('../media/floatingdllrs.png');
+  background-size: cover;
+}
+
+.home-card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(34, 53, 90, 0.9);
+}
+
+.home-card * {
+  z-index: 1;
+}
+
+.hc-txt h2 {
+  font-family: var(--font-gill);
+  font-size: 2.4rem;
+  font-weight: 900;
+  padding-bottom: 4%;
+}
+
+.hc-txt h3 {
+  font-family: var(--font-lato);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.hc-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illus-img {
+  width: 90%;
+  height: 90%;
 }
 
 #search {
   padding: 12px;
-  border-radius: 3.6%;
-  border: none;
-  outline: none;
   font-size: 1.2rem;
   font-family: var(--font-lato);
   font-weight: 600;
-  color: rgb(37,49,70);
+  color: rgb(37, 49, 70);
+}
+
+#search input {
+  padding: 10px;
+  border: 0;
+  outline: none;
+  box-shadow: 0px 0px 64px 12px rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  width: 100%;
+  height: 64px;
 }
 
 .currency-card {
@@ -49,8 +96,7 @@
   justify-content: space-between;
   height: 192px;
   width: 192px;
-  border: 2px solid black;
-  border-radius: 5px;
+  border: 1px solid black;
   background: var(--gradient-rad);
 }
 
@@ -89,6 +135,21 @@
 .cards-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  gap: 16px;
+}
+
+@media screen and (max-width: 784px) {
+  .home-card {
+    flex-direction: column;
+  }
+
+  .illus-img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .cards-container {
+    grid-template-columns: auto auto;
+    gap: 4px;
+  }
 }

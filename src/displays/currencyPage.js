@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCurrencies } from '../redux/currencySlice';
 import CurrencyItem from '../components/currencyItem';
-import illus from '../media/currexchvct.png';
+import illus from '../media/worldbills.png';
 
 const CurrenciesPage = () => {
   const currencies = useSelector((state) => state.currencies);
