@@ -1,7 +1,8 @@
 .currency-detail,
 .curr-detail-card,
 .curr-detail-header,
-.curr-detail-footer {
+.curr-detail-footer,
+.detail-card {
   display: flex;
 }
 
@@ -70,15 +71,25 @@
   color: var(--color-links);
 }
 
-.currency-info ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.info-cards {
   display: grid;
   grid-template-columns: auto auto;
 }
 
-.currency-info ul li {
+.detail-card {
+  flex-direction: row;
+  width: 360px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.info-logo {
+  width: 128px;
+  height: 128px;
+}
+
+.li {
   padding: 24px;
   margin: 0;
   font-size: 1.2rem;
@@ -92,6 +103,21 @@
   align-items: flex-end;
 }
 
-.li-typeA {
+.li p {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--font-gill);
+  letter-spacing: 2.4px;
+  color: var(--color-links);
+}
+
+.typeA {
   background: var(--color-cardone);
+}
+
+@media screen and (max-width: 784px) {
+  .info-cards {
+    display: grid;
+    grid-template-columns: auto;
+  }
 }

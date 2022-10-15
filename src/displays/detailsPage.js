@@ -1,6 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import '../css/details.css';
+import worldlogo from '../media/world-icon.png';
+import successlogo from '../media/success-icon.png';
+import startlogo from '../media/start-icon.png';
+import clocklogo from '../media/clock-icon.png';
 
 const CurrencyDetails = () => {
   const location = useLocation();
@@ -32,29 +36,41 @@ const CurrencyDetails = () => {
       </div>
       <div className="currency-info">
         <h3>Detailed Information</h3>
-        <ul>
-          <li className="li-typeA">
-            <h4>Status</h4>
-            <p>{curr.status}</p>
-          </li>
-          <li className="li-typeB">
-            <h4>Country</h4>
-            <p>
-              {curr.countryName}
-              (
-              {curr.countryCode}
-              )
-            </p>
-          </li>
-          <li className="li-typeB">
-            <h4>Available Since</h4>
-            <p>{curr.availableFrom}</p>
-          </li>
-          <li className="li-typeA">
-            <h4>Available Until</h4>
-            <p>{curr.availableTill}</p>
-          </li>
-        </ul>
+        <div className="info-cards">
+          <div className="detail-card typeA">
+            <img src={successlogo} alt="success-logo" className="info-logo" />
+            <div className="li">
+              <h4>Status</h4>
+              <p>{curr.status}</p>
+            </div>
+          </div>
+          <div className="detail-card typeB">
+            <img src={worldlogo} alt="world-logo" className="info-logo" />
+            <div className="li">
+              <h4>Country</h4>
+              <p>
+                {curr.countryName}
+                (
+                {curr.countryCode}
+                )
+              </p>
+            </div>
+          </div>
+          <div className="detail-card typeB">
+            <img src={startlogo} alt="start-logo" className="info-logo" />
+            <div className="li">
+              <h4>Available Since</h4>
+              <p>{curr.availableFrom}</p>
+            </div>
+          </div>
+          <div className="detail-card typeA">
+            <img src={clocklogo} alt="clock-logo" className="info-logo" />
+            <div className="li">
+              <h4>Available Until</h4>
+              <p>{curr.availableTill}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
