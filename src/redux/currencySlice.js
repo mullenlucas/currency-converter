@@ -33,7 +33,7 @@ export const getCurrencies = () => async (dispatch) => {
     acronym: e.currencyCode,
     icon: e.icon,
     status: e.status,
-    availableFrom: e.available_in_historical_data_form,
+    availableFrom: e.available_in_historical_data_from.replace(/[[\]']+/g, '').replace(/[ ,]+/g, '-'),
     availableTill: e.available_in_historical_data_till,
     countryCode: e.countryCode,
     countryName: e.countryName,
