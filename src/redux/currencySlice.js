@@ -40,7 +40,7 @@ export const getCurrencies = () => async (dispatch) => {
     availableTill: e.available_in_historical_data_till,
     countryCode: e.countryCode,
     countryName: e.countryName,
-    USDconversion: conversionObj.rates[e.currencyCode],
+    USDconversion: parseFloat(conversionObj.rates[e.currencyCode]).toFixed(2),
   }));
 
   dispatch(fetchCurrencies(obj));
@@ -50,20 +50,6 @@ const currencies = (state = currencyInitialState, action) => {
   switch (action.type) {
     case FETCH_CURRENCIES:
       return action.payload;
-    // case JOIN_MISSION:
-    //   return state.map((mission) => {
-    //     if (mission.id === action.payload) {
-    //       return { ...mission, joined: true };
-    //     }
-    //     return mission;
-    //   });
-    // case LEAVE_MISSION:
-    //   return state.map((mission) => {
-    //     if (mission.id === action.payload) {
-    //       return { ...mission, joined: false };
-    //     }
-    //     return mission;
-    //   });
     default:
       return state;
   }

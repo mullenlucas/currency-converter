@@ -1,3 +1,123 @@
+.currency-detail,
+.curr-detail-card,
+.curr-detail-header,
+.curr-detail-footer,
+.detail-card {
+  display: flex;
+}
+
+.curr-detail-card *,
+.currency-info * {
+  color: white;
+}
+
+.currency-detail,
 .curr-detail-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency-detail {
+  background: var(--color-exterior);
+  padding-top: 2%;
+}
+
+.curr-detail-card {
+  gap: 24px;
+  width: 90%;
+  padding: 24px;
+  background-color: rgba(34, 53, 90, 0.9);
+}
+
+.curr-detail-header,
+.curr-detail-footer {
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.curr-detail-header h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.currency-icon-detail {
+  width: 128px;
+  height: 128px;
+}
+
+.curr-detail-footer h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.currency-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 90%;
+  padding: 24px;
   background: var(--gradient-rad);
+}
+
+.currency-info h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-gill);
+  letter-spacing: 2.4px;
+  color: var(--color-links);
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.detail-card {
+  flex-direction: row;
+  width: 360px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.info-logo {
+  width: 128px;
+  height: 128px;
+}
+
+.li {
+  padding: 24px;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: var(--font-gill);
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.li p {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--font-gill);
+  letter-spacing: 2.4px;
+  color: var(--color-links);
+}
+
+.typeA {
+  background: var(--color-cardone);
+}
+
+@media screen and (max-width: 784px) {
+  .info-cards {
+    display: grid;
+    grid-template-columns: auto;
+  }
 }

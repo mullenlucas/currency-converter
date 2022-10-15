@@ -1,29 +1,160 @@
+.body-section,
 .currency-card,
 .currency-card-header,
-.currency-card-footer {
+.currency-card-footer,
+.home-card {
   display: flex;
+}
+
+.single-currency {
+  text-decoration: none;
+  color: white;
+}
+
+.single-currency:hover {
+  text-decoration: none;
+  color: var(--color-links);
+}
+
+.body-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--color-exterior);
+  padding: 2% 0;
+}
+
+.home-card {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  background-image: url('../media/floatingdllrs.png');
+  background-size: cover;
+}
+
+.home-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(34, 53, 90, 0.9);
+}
+
+.home-card * {
+  z-index: 1;
+}
+
+.hc-txt h2 {
+  font-family: var(--font-gill);
+  font-size: 2.4rem;
+  font-weight: 900;
+  padding-bottom: 4%;
+}
+
+.hc-txt h3 {
+  font-family: var(--font-lato);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.hc-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illus-img {
+  width: 90%;
+  height: 90%;
+}
+
+#search {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-family: var(--font-lato);
+  font-weight: 600;
+  color: rgb(37, 49, 70);
+}
+
+#search input {
+  padding: 10px;
+  border: 0;
+  outline: none;
+  box-shadow: 0 0 64px 12px rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  width: 100%;
+  height: 64px;
 }
 
 .currency-card {
   flex-direction: column;
   justify-content: space-between;
-  height: 128px;
-  width: 128px;
+  height: 192px;
+  width: 192px;
+  border: 1px solid black;
+  background: var(--gradient-rad);
 }
 
 .currency-card-header {
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
+  height: 80%;
+}
+
+.currency-card-header h4 {
+  font-size: 1.4rem;
 }
 
 .currency-card-footer {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  height: 20%;
+}
+
+.currency-card-footer h3 {
+  font-size: 1.6rem;
+}
+
+.currency-card-footer h5 {
+  font-size: 1.2rem;
 }
 
 .currency-icon {
   width: 64px;
   height: 64px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 16px;
+}
+
+@media screen and (max-width: 784px) {
+  .home-card {
+    flex-direction: column;
+  }
+
+  .illus-img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .cards-container {
+    grid-template-columns: auto auto;
+    gap: 4px;
+  }
 }

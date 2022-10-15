@@ -10,7 +10,7 @@ const CurrencyItem = ({ currency }) => {
     <>
       <div className="currency-card" id={id}>
         <div className="currency-card-header">
-          <h3>{name}</h3>
+          <h4>{name}</h4>
           <img
             alt="currency-icon"
             className="currency-icon"
@@ -19,8 +19,8 @@ const CurrencyItem = ({ currency }) => {
           />
         </div>
         <div className="currency-card-footer">
-          <h2>{acronym}</h2>
-          <h4>{USDconversion}</h4>
+          <h3>{acronym}</h3>
+          <h5>{USDconversion}</h5>
         </div>
       </div>
     </>

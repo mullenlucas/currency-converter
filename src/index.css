@@ -9,10 +9,6 @@
   --color-maincard: rgb(34, 53, 90);
   --color-cardone: rgb(27, 42, 69);
   --color-cardtwo: rgb(25, 39, 65);
+  --color-links: rgb(232, 119, 255);
   --gradient-rad: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(26, 41, 70, 1) 65%, rgba(26, 41, 70, 1) 100%);
-}
-
-.sape {
-  height: 70px;
-  overflow-y: scroll;
 }

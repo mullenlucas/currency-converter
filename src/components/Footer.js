@@ -1,13 +1,28 @@
-import { Link } from 'react-router-dom';
 import '../css/footer.css';
 
 function Footer() {
   return (
     <footer>
-      <p>
-        Powered by
-        <Link to="https://www.amdoren.com">Amdoren</Link>
-      </p>
+      <div className="footer-header">
+        <p>
+          Lucas Mullen
+        </p>
+        <p>
+          All rights reserved
+        </p>
+      </div>
+      <div className="footer-footer">
+        <p>
+          Go to
+          <a href="https://github.com/mullenlucas/currency-converter">
+            {' '}
+            GitHub repository
+            {' '}
+          </a>
+          for more information and acknowledgements
+        </p>
+      </div>
+
     </footer>
   );
 }
