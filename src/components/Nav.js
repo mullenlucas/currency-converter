@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../media/currency-dice.png';
 import '../css/nav.css';
 
-function Nav({ title, routes }) {
+function Nav({ title }) {
+  const location = useLocation();
+
   return (
     <header>
       <Link className="header-logo" to="/">
@@ -12,13 +14,11 @@ function Nav({ title, routes }) {
       </Link>
       <nav>
         <ul className="ul-links">
-          {routes.map(({ name, path }) => (
-            <li key={path}>
-              <NavLink className="nav-link" to={path} end>
-                { name }
-              </NavLink>
-            </li>
-          ))}
+          <li>
+            <NavLink to="/" id="home">
+              {location.pathname === '/' ? 'Currencies' : 'Go Back'}
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
@@ -27,11 +27,6 @@ function Nav({ title, routes }) {
 
 Nav.propTypes = {
   title: PropTypes.string.isRequired,
-  routes: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    path: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired,
 };
 
 export default Nav;

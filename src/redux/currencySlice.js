@@ -1,28 +1,11 @@
-import axios from 'axios';
-import { createSlice } from '@reduxjs/toolkit';
+// import axios from 'axios';
+import conversionObj from './currencies_conv';
+import currenciesList from './currencies_list';
 
-const apiKey = '422061d241f24ab4869119d3071f61d2';
+// const apiKey = '422061d241f24ab4869119d3071f61d2';
 
-export const currencySlice = createSlice({
-  name: 'convert2USDnEUR',
-  initialState: {
-    from: '',
-    conversions: [],
-  },
-  reducers: {
-    convert(state, action) {
-      const currVals = action.payload;
-      state.conversions.push({
-        currency: currVals.curr,
-        toUsd: currVals.tousd,
-        toEur: currVals.toeur,
-      });
-    },
-  },
-});
-
-const currencyListUrl = 'https://api.currencyfreaks.com/supported-currencies';
-const currencyConversionsUrl = 'https://api.currencyfreaks.com/latest';
+// const currencyListUrl = 'https://api.currencyfreaks.com/supported-currencies';
+// const currencyConversionsUrl = 'https://api.currencyfreaks.com/latest';
 
 const currencyInitialState = [];
 
@@ -35,16 +18,17 @@ export const fetchCurrencies = (curr) => ({
 });
 
 export const getCurrencies = () => async (dispatch) => {
-  const response = await axios.get(currencyListUrl);
-  const objResponse = response.data;
+  // const response = await axios.get(currencyListUrl);
+  // const objResponse = response.data;
+  const objResponse = currenciesList;
   const filteredObjResp = objResponse.filter((v) => v.currencyName !== null && v.countryCode !== 'Crypto');
 
-  const convertionResponse = await axios.get(currencyConversionsUrl, {
-    params: {
-      apikey: apiKey,
-    },
-  });
-  const conversionObj = convertionResponse.data;
+  // const convertionResponse = await axios.get(currencyConversionsUrl, {
+  //   params: {
+  //     apikey: apiKey,
+  //   },
+  // });
+  // const conversionObj = convertionResponse.data;
 
   const obj = filteredObjResp.map((e, i) => ({
     id: i,
