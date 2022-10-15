@@ -1,11 +1,9 @@
-// import axios from 'axios';
-import conversionObj from './currencies_conv';
-import currenciesList from './currencies_list';
+import axios from 'axios';
 
-// const apiKey = '422061d241f24ab4869119d3071f61d2';
+const apiKey = '422061d241f24ab4869119d3071f61d2';
 
-// const currencyListUrl = 'https://api.currencyfreaks.com/supported-currencies';
-// const currencyConversionsUrl = 'https://api.currencyfreaks.com/latest';
+const currencyListUrl = 'https://api.currencyfreaks.com/supported-currencies';
+const currencyConversionsUrl = 'https://api.currencyfreaks.com/latest';
 
 const currencyInitialState = [];
 
@@ -18,17 +16,16 @@ export const fetchCurrencies = (curr) => ({
 });
 
 export const getCurrencies = () => async (dispatch) => {
-  // const response = await axios.get(currencyListUrl);
-  // const objResponse = response.data;
-  const objResponse = currenciesList;
+  const response = await axios.get(currencyListUrl);
+  const objResponse = response.data;
   const filteredObjResp = objResponse.filter((v) => v.currencyName !== null && v.countryCode !== 'Crypto');
 
-  // const convertionResponse = await axios.get(currencyConversionsUrl, {
-  //   params: {
-  //     apikey: apiKey,
-  //   },
-  // });
-  // const conversionObj = convertionResponse.data;
+  const convertionResponse = await axios.get(currencyConversionsUrl, {
+    params: {
+      apikey: apiKey,
+    },
+  });
+  const conversionObj = convertionResponse.data;
 
   const obj = filteredObjResp.map((e, i) => ({
     id: i,
