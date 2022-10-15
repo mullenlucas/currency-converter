@@ -1,29 +1,94 @@
+.body-section,
 .currency-card,
 .currency-card-header,
-.currency-card-footer {
+.currency-card-footer,
+.home-card {
   display: flex;
+}
+
+.single-currency {
+  text-decoration: none;
+  color: white;
+}
+
+.body-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background-color: var(--color-exterior);
+  padding: 2% 0;
+}
+
+.home-card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 3.6%;
+  background: rgb(37,49,70);
+  color: white;
+  text-align: center;
+  width: 90%;
+}
+
+#search {
+  padding: 12px;
+  border-radius: 3.6%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: var(--font-lato);
+  font-weight: 600;
+  color: rgb(37,49,70);
 }
 
 .currency-card {
   flex-direction: column;
   justify-content: space-between;
-  height: 128px;
-  width: 128px;
+  height: 192px;
+  width: 192px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: var(--gradient-rad);
 }
 
 .currency-card-header {
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
+  height: 80%;
+}
+
+.currency-card-header h4 {
+  font-size: 1.4rem;
 }
 
 .currency-card-footer {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  height: 20%;
+}
+
+.currency-card-footer h3 {
+  font-size: 1.6rem;
+}
+
+.currency-card-footer h5 {
+  font-size: 1.2rem;
 }
 
 .currency-icon {
   width: 64px;
   height: 64px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
 }

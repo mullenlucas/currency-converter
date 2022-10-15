@@ -40,7 +40,7 @@ export const getCurrencies = () => async (dispatch) => {
     availableTill: e.available_in_historical_data_till,
     countryCode: e.countryCode,
     countryName: e.countryName,
-    USDconversion: conversionObj.rates[e.currencyCode],
+    USDconversion: parseFloat(conversionObj.rates[e.currencyCode]).toFixed(2),
   }));
 
   dispatch(fetchCurrencies(obj));
