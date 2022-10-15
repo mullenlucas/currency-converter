@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getCurrencies } from '../redux/currencySlice';
 import CurrencyItem from '../components/currencyItem';
 
@@ -33,7 +34,15 @@ const CurrenciesPage = () => {
       </div>
       <div className="container">
         {filtered.map((curr) => (
-          <CurrencyItem key={curr.id} currency={curr} />
+          <Link
+            to="details"
+            state={{ curr }}
+            className="single-currency"
+            key={curr.id}
+          >
+            <CurrencyItem currency={curr} />
+          </Link>
+
         ))}
       </div>
     </>
