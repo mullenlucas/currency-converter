@@ -84,8 +84,9 @@ Give a ⭐️ if you like this project!
 - To all the collaborators for the Readme Template and the Linters
 - The Microverse Team
 - My coding-partners and fellow cohort members
-- Image for the header logo taken from [here](https://www.pngegg.com/en/png-zmlqe)
-- 
+- Images and icons taken from [here](https://www.pngegg.com/)
+- Information retrieve from the [Currency Freaks API](https://currencyfreaks.com/documentation.html)
+- Design guidelines followed from [Nelson Sakwa's design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 ## 📝 License
 
