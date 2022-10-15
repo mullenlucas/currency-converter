@@ -25,9 +25,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project fetches information from the [CurrencyFreaks-API](https://currencyfreaks.com/documentation.html)
 
-## Images Showcase
+## Preview
 
+- **Desktop Home Page**
 
+![](readmeimgs/desktop-home.png)
+
+- **Mobile Home Page**
+
+![](readmeimgs/mobile-home.png)
+
+- **Search 'Dollar'**
+
+![](readmeimgs/search-dollar.png)
+
+- **Details page**
+
+![](readmeimgs/details-site.png)
 
 ## To run this repository locally, clone this repository and run this command on the directory's terminal:
 
