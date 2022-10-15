@@ -31,7 +31,7 @@ const CurrencyDetails = () => {
 
       </div>
       <div className="currency-info">
-        <h4>Detailed Information</h4>
+        <h3>Detailed Information</h3>
         <ul>
           <li className="li-typeA">
             <h4>Status</h4>

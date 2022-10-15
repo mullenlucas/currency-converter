@@ -26,6 +26,7 @@
   gap: 24px;
   width: 90%;
   padding: 24px;
+  background-color: rgba(34, 53, 90, 0.9);
 }
 
 .curr-detail-header,
@@ -50,10 +51,6 @@
   font-weight: 600;
 }
 
-.curr-detail-card {
-  background-color: rgba(34, 53, 90, 0.9);
-}
-
 .currency-info {
   display: flex;
   flex-direction: column;
@@ -63,6 +60,14 @@
   width: 90%;
   padding: 24px;
   background: var(--gradient-rad);
+}
+
+.currency-info h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-gill);
+  letter-spacing: 2.4px;
+  color: var(--color-links);
 }
 
 .currency-info ul {

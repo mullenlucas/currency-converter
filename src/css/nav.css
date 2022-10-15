@@ -14,16 +14,15 @@ header {
 h1 {
   font-family: var(--font-lato);
   font-weight: 900;
-  font-size: 2.4rem;
   color: rgb(254, 255, 221);
+  letter-spacing: 2px;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 3.6%;
-  gap: 12px;
+  gap: 24px;
   text-decoration: none;
 }
 
@@ -44,6 +43,14 @@ h1 {
   font-weight: 600;
 }
 
-.ul-links * {
+.ul-links li a {
   text-decoration: none;
+  color: rgb(255, 245, 187);
+  font-family: var(--font-gill);
+  letter-spacing: 1.2px;
+  font-size: 1.4rem;
+}
+
+.ul-links li a:hover {
+  color: var(--color-links);
 }
