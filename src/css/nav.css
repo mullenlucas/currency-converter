@@ -1,0 +1,56 @@
+header,
+nav,
+.ul-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+header {
+  background-color: var(--color-exterior);
+  padding: 0.6rem;
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  font-family: var(--font-lato);
+  font-weight: 900;
+  color: rgb(254, 255, 221);
+  letter-spacing: 2px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  text-decoration: none;
+}
+
+.logo-img {
+  max-width: 64px;
+  color: white;
+}
+
+.ul-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  font-family: var(--font-lato);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ul-links li a {
+  text-decoration: none;
+  color: rgb(255, 245, 187);
+  font-family: var(--font-gill);
+  letter-spacing: 1.2px;
+  font-size: 1.4rem;
+}
+
+.ul-links li a:hover {
+  color: var(--color-links);
+}
